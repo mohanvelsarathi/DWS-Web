@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - DWS</title>
+    <meta name="description"
+        content="DWS builds high-performance, scalable websites that combine clean code with seamless functionality to drive real business growth.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/DWS logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aladin&family=Alata&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Use existing navbar structure -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/DWS logo.png" alt="DWS Logo" class="logo-img">
+                <span></span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#contact" class="btn-contact">Contact</a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="uiux-hero">
+        <div class="container">
+            <h1 class="uiux-title">
+                <span>WEB DEVELOPMENT</span>
+                <span>Services</span>
+            </h1>
+
+            <div class="about-grid">
+                <div class="about-visual">
+                    <!-- Abstract Triangle Outline -->
+                    <svg viewBox="0 0 400 350" class="geometric-shape">
+                        <path class="path path-1"
+                            d="M120 40 L280 40 Q300 40 290 60 L210 220 Q200 240 190 220 L110 60 Q100 40 120 40 Z" />
+                        <path class="path path-2"
+                            d="M180 110 L340 110 Q360 110 350 130 L270 290 Q260 310 250 290 L170 130 Q160 110 180 110 Z" />
+                        <path class="path path-3"
+                            d="M60 110 L220 110 Q240 110 230 130 L150 290 Q140 310 130 290 L50 130 Q40 110 60 110 Z" />
+                    </svg>
+                </div>
+
+                <div class="about-content">
+                    <p class="uiux-hero-desc reveal-text" style="text-align: left; margin: 0;">
+                        At DWS, We Build High-Performance, Scalable Websites That Combine Clean Code With Seamless
+                        Functionality. From Responsive Front-End Interfaces To Robust Back-End Systems, We Transform
+                        Ideas Into Fast, Secure, And Future-Ready Web Experiences That Drive Real Business Growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Works Section -->
+    <section class="works-section">
+        <div class="container">
+            <div class="works-header">
+                <h2 class="works-title">Works.</h2>
+                <div class="works-line-wrapper">
+                    <span class="diamond start"></span>
+                    <span class="line-fill"></span>
+                    <span class="diamond end"></span>
+                </div>
+            </div>
+
+            <div class="work-content-wrapper">
+                <!-- Left Nav -->
+                <div class="nav-control prev" tabindex="0" role="button" aria-label="Previous Slide">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Main Card Display Area -->
+                <div class="slider-container">
+
+                    <!-- Slide 1: Crafy -->
+                    <div class="project-slide active">
+                        <div class="project-display">
+                            <div class="project-visual">
+                                <div class="visual-card-bg">
+                                    <img src="assets/WD 1 Image.png" alt="Crafy">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Crafy</h3>
+                                <p class="project-description">
+                                    A Creative And Strategy-Driven Digital Agency Dedicated
+                                    To Building Powerful Brand Experiences. At CRAFY, We Help
+                                    Businesses Grow Through Innovative Design, Smart
+                                    Development, And Result-Focused Marketing Solutions.
+                                    Designed To Deliver Impact And Efficiency, Our Approach
+                                    Ensures Seamless Execution And Measurable Digital Success.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Placeholder -->
+                    <div class="project-slide">
+                        <div class="project-display">
+                            <div class="project-visual">
+                                <div class="visual-card-bg">
+                                    <img src="assets/WD 2 Image.png" alt="E-Commerce">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">E-Commerce Platform</h3>
+                                <p class="project-description">
+                                    A Fully Functional E-Commerce Platform Built With
+                                    Modern Technologies For Seamless Online Shopping.
+                                    Features Include Secure Payment Integration, Product
+                                    Management, And A Responsive Design That Ensures
+                                    A Smooth User Experience Across All Devices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Placeholder -->
+                    <div class="project-slide">
+                        <div class="project-display">
+                            <div class="project-visual">
+                                <div class="visual-card-bg">
+                                    <img src="assets/WD 3 Image.png" alt="Web App">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Custom Web Application</h3>
+                                <p class="project-description">
+                                    A Custom-Built Web Application Designed To Streamline
+                                    Business Operations. With A Focus On Performance,
+                                    Security, And Scalability, The Solution Delivers
+                                    Real-Time Data Processing, User Management, And
+                                    Seamless Integration With Third-Party Services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Nav -->
+                <div class="nav-control next" tabindex="0" role="button" aria-label="Next Slide">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="13 17 18 12 13 7"></polyline>
+                        <polyline points="6 17 11 12 6 7"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Our Web Development Services?</h2>
+
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <p>At DWS, We Go Beyond Just Building Websites — We Create Powerful Digital Platforms That Drive
+                        Real Business Growth. Our Team Combines Strategic Planning, Modern Technologies, And Clean
+                        Development Practices To Deliver Fast, Secure, And Scalable Web Solutions.</p>
+                </div>
+                <!-- Hidden Reasons -->
+                <div class="extra-reasons" style="display: none; width: 100%;">
+                    <div class="reason-item">
+                        <p>We Focus On Developing Seamless, Responsive, And Performance-Optimized Websites That Align
+                            With
+                            Your Brand Identity And Business Objectives — Ensuring Smooth Functionality Across All
+                            Devices.</p>
+                    </div>
+                    <br><br>
+                    <div class="reason-item">
+                        <p>By Blending Technical Expertise With A Results-Driven Approach, We Build Web Solutions That
+                            Not
+                            Only Look Impressive But Also Enhance User Experience, Improve Performance, And Support
+                            Long-Term Success.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See More Button -->
+            <button id="see-more-btn" class="see-more-btn">
+                See More <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <br>
+
+            <a href="index.html#contact-form-anchor" class="btn-get-touch">
+                Get In Touch <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why DWS -->
+    <section style="padding: 100px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-family: 'Alata'; font-size: 2rem; margin-bottom: 30px;">Why DWS Is The Right Web Development
+                Partner For You?</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: #ccc; line-height: 1.6; font-family: 'Outfit';">
+                We're More Than Just Developers — We're Your Technology Partners In Building Powerful Digital Platforms
+                That Drive Real Business Results. At DWS, Our Focus Goes Beyond Aesthetics; We Create Scalable, Secure,
+                And High-Performing Websites That Are Strategically Aligned With Your Business Goals.
+                <br><br>
+                From Front-End Experiences To Back-End Architecture, We Ensure Every Element Works Seamlessly Together —
+                Delivering Speed, Reliability, And Long-Term Growth For Your Brand.
+            </p>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h2>Let's Build Something Great Together.</h2>
+                <a href="index.html#contact-form-anchor" class="discuss-btn">
+                    Discuss About Your Project <i class="fas fa-angle-double-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Simulated to match index) -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/DWS logo.png" alt="DWS Logo" style="opacity: 0.8;">
+                </a>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/design_with_sago?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/9445607977?text=Hello" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:designwithsago@gmail.com" target="_blank" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 — Design With Sago</p>
+        </div>
+        <div class="footer-glow"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

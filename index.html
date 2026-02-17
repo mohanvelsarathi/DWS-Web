@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWS</title>
+    <meta name="description"
+        content="DWS is your digital growth partner, offering UI/UX design, graphic design, and web development services to help brands grow.">
+    <meta name="keywords"
+        content="digital agency, UI/UX design, web development, graphic design, branding, DWS, Design With Sago">
+    <meta name="author" content="Design With Sago">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.designwithsago.com/">
+    <meta property="og:title" content="DWS - Your Digital Growth Partner">
+    <meta property="og:description"
+        content="DWS creates clean, modern, and user-focused digital experiences. We help brands grow through thoughtful design and smart development.">
+    <meta property="og:image" content="https://www.designwithsago.com/DWS%20logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.designwithsago.com/">
+    <meta property="twitter:title" content="DWS - Your Digital Growth Partner">
+    <meta property="twitter:description" content="DWS creates clean, modern, and user-focused digital experiences.">
+    <meta property="twitter:image" content="https://www.designwithsago.com/DWS%20logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/DWS logo.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Alata&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aladin&family=Alata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <!-- SVG CLIP PATH -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="triangleClip" clipPathUnits="objectBoundingBox">
+                <!-- Rounded Inverted Triangle -->
+                <path
+                    d="M 0.05 0.05 H 0.95 Q 1 0.05 0.97 0.1 L 0.53 0.95 Q 0.5 1 0.47 0.95 L 0.03 0.1 Q 0 0.05 0.05 0.05 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/DWS logo.png" alt="DWS Logo" class="logo-img">
+                <span></span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact" class="btn-contact">Contact</a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="video-container">
+            <video autoplay muted loop playsinline>
+                <source src="assets/DWS Video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-bg-glow"></div>
+        <div class="container">
+            <h1 class="hero-title">
+                <div class="line"><span>YOUR DIGITAL GROWTH</span></div>
+                <div class="line"><span>PARTNER</span></div>
+            </h1>
+
+        </div>
+
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"
+            style="cursor: pointer;">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>SCROLL DOWN</span>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-visual">
+                <span class="section-tag">HEY THERE! WE ARE DWS.</span>
+                <!-- Abstract Geometric SVG -->
+                <svg viewBox="0 0 400 350" class="geometric-shape">
+                    <path class="path path-1"
+                        d="M120 40 L280 40 Q300 40 290 60 L210 220 Q200 240 190 220 L110 60 Q100 40 120 40 Z" />
+                    <path class="path path-2"
+                        d="M180 110 L340 110 Q360 110 350 130 L270 290 Q260 310 250 290 L170 130 Q160 110 180 110 Z" />
+                    <path class="path path-3"
+                        d="M60 110 L220 110 Q240 110 230 130 L150 290 Q140 310 130 290 L50 130 Q40 110 60 110 Z" />
+                </svg>
+            </div>
+            <div class="about-content">
+                <p class="reveal-text">Design With Sago (DWS) Creates Clean, Modern, And User-Focused Digital
+                    Experiences. We Help Brands Grow Through Thoughtful Design, Smart Development, And Result-Driven
+                    Solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <span class="section-label">OUR SERVICES</span>
+
+            <div class="services-list">
+                <a href="ui_ux_design.html" class="service-item">
+                    <h2 class="service-name">UI/UX DESIGN</h2>
+                    <div class="service-arrow">
+                        <svg class="pixel-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11h14v-2h2v2h2v-2h2v6h-2v-2h-2v2h-2v-2H2v-2z" fill="none" stroke="white"
+                                stroke-width="1.5" />
+                            <path d="M16 11h2v2h-2z" fill="white" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="graphic_design.html" class="service-item">
+                    <h2 class="service-name">GRAPHIC DESIGN</h2>
+                    <div class="service-arrow">
+                        <svg class="pixel-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11h14v-2h2v2h2v-2h2v6h-2v-2h-2v2h-2v-2H2v-2z" fill="none" stroke="white"
+                                stroke-width="1.5" />
+                            <path d="M16 11h2v2h-2z" fill="white" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="web_development.html" class="service-item">
+                    <h2 class="service-name">WEBSITES</h2>
+                    <div class="service-arrow">
+                        <svg class="pixel-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11h14v-2h2v2h2v-2h2v6h-2v-2h-2v2h-2v-2H2v-2z" fill="none" stroke="white"
+                                stroke-width="1.5" />
+                            <path d="M16 11h2v2h-2z" fill="white" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header center">
+            <div class="tag-pill">WALL OF LOVE</div>
+            <h2 class="section-heading">Loved by thinkers</h2>
+        </div>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <!-- Cards will be injected/duplicated by JS -->
+                <div class="review-card">
+                    <p>"This is truly Incredible and have saved us countless hours!"</p>
+                    <div class="rating-wrapper">
+                        <span class="rating-number">5.0</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar"
+                            style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); background-size: cover;">
+                        </div>
+                        <div class="info">
+                            <h4>jack hanma</h4>
+                            <span>JK Finance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>"Transformed our brand identity completely. Highly recommend DWS."</p>
+                    <div class="rating-wrapper">
+                        <span class="rating-number">5.0</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar"
+                            style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg'); background-size: cover;">
+                        </div>
+                        <div class="info">
+                            <h4>Sarah Jenkins</h4>
+                            <span>Founder, Artisp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>"Smooth communication and top-tier design quality."</p>
+                    <div class="rating-wrapper">
+                        <span class="rating-number">5.0</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar"
+                            style="background-image: url('https://randomuser.me/api/portraits/men/86.jpg'); background-size: cover;">
+                        </div>
+                        <div class="info">
+                            <h4>Michael Chen</h4>
+                            <span>Director, Studio X</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>"Best digital partner we've worked with so far."</p>
+                    <div class="rating-wrapper">
+                        <span class="rating-number">5.0</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar"
+                            style="background-image: url('https://randomuser.me/api/portraits/women/65.jpg'); background-size: cover;">
+                        </div>
+                        <div class="info">
+                            <h4>Emily Rose</h4>
+                            <span>Marketing Head</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header center">
+                <div class="tag-pill-1">FAQ SECTION</div>
+                <h2 class="section-heading-1">SOME COMMON FAQ'S</h2>
+                <p class="sub-heading">Get answers to your questions and learn about our platform</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What services does Design With Sago (DWS) offer?</h3>
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer UI/UX design, website development, branding, social media
+                            creatives and complete digital design solutions for your brand.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does DWS ensure high-quality and unique designs?</h3>
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p> We design everything from scratch based on your brand and audience.
+                            No templates—only custom, thoughtful design.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is this template optimized for SEO and speed??</h3>
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. It follows best practices for SEO and performance,
+                            ensuring fast load times and better visibility on search engines.</p>
+                    </div>
+                </div>
+                <!-- Fixed Nesting -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use this for commercial projects?</h3>
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our websites are fast, mobile-friendly, and built with SEO best practices.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I start a project with DWS?</h3>
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Just contact us and share your idea. We’ll take care of the
+                            rest—from planning to launch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <span class="section-label-1">CONTACT</span>
+                <h2 class="contact-heading">Let's Build Something <br><span class="highlight">Great Together.</span>
+                </h2>
+
+                <a href="tel:+917550348601" class="phone-wrapper"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="phone-layer layer-1"></div>
+                    <div class="phone-layer layer-2"></div>
+                    <div class="phone-display">
+                        <span class="label">Phone No:</span>
+                        <span class="number">+91 75503 48601</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contact-right-column">
+                <div id="contact-form-anchor" class="contact-form-card">
+                    <div class="form-header-internal">
+                        <div class="get-in-touch-pill">Get In Touch</div>
+                        <p class="form-intro">Fill out the form below and we’ll get back to you as soon as possible.</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="input-group">
+                            <select required>
+                                <option value="" disabled selected hidden>Project Type</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="Graphic Design">Graphic Design</option>
+                                <option value="Website">Website</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <textarea placeholder="Your Message..." rows="4"></textarea>
+                        </div>
+                        <div class="submit-wrapper">
+                            <button type="submit" class="submit-btn">Send <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Request Sent!</h3>
+                        <p>Our team is reviewing your request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#home" class="logo">
+                    <img src="assets/DWS logo.png" alt="DWS Logo" style="opacity: 0.8;">
+                </a>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/design_with_sago?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/9080605170?text=Hello" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:designwithsago@gmail.com" target="_blank" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 — Design With Sago</p>
+        </div>
+        <div class="footer-glow"></div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

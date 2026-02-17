@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design - DWS</title>
+    <meta name="description"
+        content="DWS offers refined, user-centered UI/UX design services to transform complex ideas into intuitive digital experiences.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/DWS logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aladin&family=Alata&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Use existing navbar structure -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/DWS logo.png" alt="DWS Logo" class="logo-img">
+                <span></span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#contact" class="btn-contact">Contact</a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="uiux-hero">
+        <div class="container">
+            <h1 class="uiux-title">
+                <span>UI/UX</span>
+                <span>Design Services</span>
+            </h1>
+
+            <div class="about-grid"> <!-- Reusing existing grid class -->
+                <div class="about-visual">
+                    <!-- Abstract Triangle Outline -->
+                    <svg viewBox="0 0 400 350" class="geometric-shape">
+                        <path class="path path-1"
+                            d="M120 40 L280 40 Q300 40 290 60 L210 220 Q200 240 190 220 L110 60 Q100 40 120 40 Z" />
+                        <path class="path path-2"
+                            d="M180 110 L340 110 Q360 110 350 130 L270 290 Q260 310 250 290 L170 130 Q160 110 180 110 Z" />
+                        <path class="path path-3"
+                            d="M60 110 L220 110 Q240 110 230 130 L150 290 Q140 310 130 290 L50 130 Q40 110 60 110 Z" />
+                    </svg>
+                </div>
+
+                <div class="about-content">
+                    <p class="uiux-hero-desc reveal-text" style="text-align: left; margin: 0;">
+                        At DWS, We Create Refined, User-Centered UI/UX Designs That Blend Elegance With Functionality.
+                        Through
+                        Thoughtful Research, Structured Wireframes, And Clean Visual Systems, We Transform Complex Ideas
+                        Into
+                        Intuitive Digital Experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Works Section -->
+    <section class="works-section">
+        <div class="container">
+            <div class="works-header">
+                <h2 class="works-title">Works.</h2>
+                <div class="works-line-wrapper">
+                    <span class="diamond start"></span>
+                    <span class="line-fill"></span>
+                    <span class="diamond end"></span>
+                </div>
+            </div>
+
+            <div class="work-content-wrapper">
+                <!-- Left Nav -->
+                <div class="nav-control prev" tabindex="0" role="button" aria-label="Previous Slide">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Main Card Display Area -->
+                <div class="slider-container">
+
+                    <!-- Slide 1: EV App (Active by default) -->
+                    <div class="project-slide active">
+                        <div class="project-display">
+                            <div class="project-visual">
+                                <div class="visual-card-bg ev-card">
+                                    <img src="assets/EV%20App%20Image.png" alt="EV Charging App Mockup">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">EV Charging Station Slot<br>Booking App</h3>
+                                <p class="project-description">
+                                    A Smart And User-Friendly Mobile App That Allows Electric
+                                    Vehicle Owners To Find Nearby Charging Stations, Check
+                                    Real-Time Availability, And Book Charging Slots Instantly.
+                                    Designed For Convenience And Efficiency, The App Ensures
+                                    Seamless Scheduling, Reduced Waiting Time, And A Smooth
+                                    EV Charging Experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Smart Home -->
+                    <div class="project-slide">
+                        <div class="project-display">
+                            <div class="project-visual">
+                                <div class="visual-card-bg smart-home-card">
+                                    <img src="assets/SHA%20Image.png" alt="Smart Home Automation">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Smart Home Automation</h3>
+                                <p class="project-description">
+                                    A Modern And Intuitive UI Design Crafted To Simplify Smart
+                                    Home Control. From Lighting And Security To Climate And
+                                    Device Management, The Interface Ensures Seamless
+                                    Navigation, Real-Time Monitoring, And Effortless User
+                                    Interaction Across All Connected Devices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Crypto Vault -->
+                    <div class="project-slide">
+                        <div class="project-display">
+                            <div class="project-visual">
+                                <div class="visual-card-bg crypto-card">
+                                    <img src="assets/Crypto%20Image.png" alt="Crypto Vault App">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Crypto Vault App</h3>
+                                <p class="project-description">
+                                    A Secure And Intuitive Mobile App Designed To Store,
+                                    Manage, And Monitor Cryptocurrency Assets Safely. With
+                                    Real-Time Tracking, Advanced Security Features, And A
+                                    User-Friendly Interface, The App Ensures Seamless Control
+                                    And Protection Of Your Digital Investments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Nav -->
+                <div class="nav-control next" tabindex="0" role="button" aria-label="Next Slide">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="13 17 18 12 13 7"></polyline>
+                        <polyline points="6 17 11 12 6 7"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Our UI/UX Design Services?</h2>
+
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <p>At DWS, We Go Beyond Visuals To Design Experiences That Deliver Real Business Impact. Our Team
+                        Blends Strategic Thinking, User Research, And Modern Interface Design To Craft Digital Products
+                        That Are Intuitive, Engaging, And Performance-Driven.</p>
+                </div>
+                <!-- Hidden Reasons -->
+                <div class="extra-reasons" style="display: none; width: 100%;">
+                    <div class="reason-item">
+                        <p>We Focus On Building Seamless User Journeys That Align With Your Brand Identity And Business
+                            Goals Ensuring Clarity, Usability, And Meaningful Interaction At Every Touchpoint.</p>
+                    </div>
+                    <br><br>
+                    <div class="reason-item">
+                        <p>By Combining Creativity With Data-Driven Insights, We Design Solutions That Not Only Look
+                            Exceptional But Also Improve Retention, Increase Engagement, And Drive Measurable Growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See More Button -->
+            <button id="see-more-btn" class="see-more-btn">
+                See More <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <br>
+
+            <a href="index.html#contact-form-anchor" class="btn-get-touch">
+                Get In Touch <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why DWS -->
+    <section style="padding: 100px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-family: 'Alata'; font-size: 2rem; margin-bottom: 30px;">Why DWS Is The Right UI/UX Design
+                Partner For You?</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: #ccc; line-height: 1.6; font-family: 'Outfit';">
+                We're More Than Just Designers — We're Your Partners In Creating Meaningful Digital Experiences That
+                Drive Real Results. At DWS, Our Focus Goes Beyond Aesthetics; We Design User Journeys That Are
+                Intuitive, Engaging, And Strategically Aligned With Your Business Goals.
+            </p>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h2>Let's Build Something Great Together.</h2>
+                <a href="index.html#contact" class="discuss-btn">
+                    Discuss About Your Project <i class="fas fa-angle-double-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Simulated to match index) -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/DWS logo.png" alt="DWS Logo" style="opacity: 0.8;">
+                </a>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/design_with_sago?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/9445607977?text=Hello" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:designwithsago@gmail.com" target="_blank" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 — Design With Sago</p>
+        </div>
+        <div class="footer-glow"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
