@@ -379,6 +379,50 @@ if (sliderContainer) {
             });
         }
     });
+
+    // Slider Swipe Support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    sliderContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    sliderContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    sliderContainer.addEventListener('touchmove', (e) => {
+        // Optional: prevent default if vertical scroll is not desired during swipe
+        // e.preventDefault(); 
+    }, { passive: true });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            updateSlide('next');
+        }
+        if (touchEndX > touchStartX + 50) {
+            updateSlide('prev');
+        }
+    }
+}
+
+// Mobile Phone Animation Trigger
+const phoneWrapper = document.querySelector('.phone-wrapper');
+if (phoneWrapper) {
+    phoneWrapper.addEventListener('click', function (e) {
+        // Only apply on mobile where hover logic is disabled/different
+        if (window.innerWidth <= 768) {
+            // Add active class
+            this.classList.add('active');
+
+            // Remove active class after animation duration (e.g., 500ms)
+            setTimeout(() => {
+                this.classList.remove('active');
+            }, 500);
+        }
+    });
 }
 
 // 12. Contact Form Submission

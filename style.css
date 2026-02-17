@@ -131,6 +131,10 @@ ul {
     width: 100%;
 }
 
+.mobile-socials {
+    display: none;
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -171,13 +175,17 @@ ul {
     justify-content: center;
     align-items: center;
     clip-path: url(#triangleClip);
+    /* Visible Lite White Smooth Glow */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 45px rgba(255, 255, 255, 0.384));
+    transition: filter 0.3s ease;
+    /* smooth transition if we want to animate later */
 }
 
 .video-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .video-container::after {
@@ -1335,6 +1343,10 @@ ul {
     display: flex;
     /* For alignment */
     align-items: center;
+    touch-action: pan-y;
+    /* Allow vertical scrolling, capture horizontal */
+    user-select: none;
+    /* Prevent text selection during swipe */
 }
 
 /* Individual Slides */
@@ -1792,40 +1804,111 @@ ul {
 
 /* 4. Mobile Devices (< 768px) */
 @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+        /* Base font size slightly smaller */
+    }
+
+    /* Container Spacing */
+    .container {
+        padding: 0 5%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Section Padding */
+    .hero,
+    .about,
+    .services,
+    .works-section,
+    .testimonials,
+    .faq,
+    .contact,
+    .why-choose,
+    .uiux-hero {
+        padding: 60px 0;
+        /* Reduced padding for mobile */
+    }
+
+    .uiux-hero {
+        padding-top: 100px;
+        /* Account for navbar */
+    }
 
     /* Navigation Overlay */
+    /* Navigation Overlay - Enhanced */
     .nav-links {
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: rgba(5, 5, 5, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.95);
+        /* Deep black for contrast */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 999;
-        /* Below toggle button (1000) */
-
-        /* Initial State Hidden for Animation */
-        opacity: 0;
-        visibility: hidden;
+        /* Trigger Clip-path Animation */
+        clip-path: circle(0% at 90% 50px);
+        /* Start top right */
+        transition: clip-path 0.6s cubic-bezier(0.19, 1, 0.22, 1);
         pointer-events: none;
-        transition: all 0.4s ease;
+        /* Ensure clicks pass through when closed */
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-links.active {
-        opacity: 1;
-        visibility: visible;
+        clip-path: circle(150% at 90% 50px);
+        /* Expand fully */
         pointer-events: all;
     }
 
-    .nav-links a {
-        font-size: 2rem;
-        margin: 20px 0;
+    /* Target Direct Links (Menu Items) */
+    .nav-links>a {
+        font-family: 'Alata', sans-serif;
+        font-size: 2.5rem;
+        margin: 15px 0;
         color: white;
+        opacity: 0;
+        /* Initial state for GSAP */
+        transform: translateY(20px);
+        text-decoration: none;
+    }
+
+    /* Mobile Socials Container */
+    .mobile-socials {
+        display: flex;
+        gap: 30px;
+        margin-top: 50px;
+        /* Container is visible, children are animated */
+    }
+
+    /* Mobile Social Icons */
+    .mobile-socials a {
+        font-size: 1.8rem;
+        color: #aaa;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        margin: 0;
+        transition: 0.3s;
+        opacity: 0;
+        /* Initial state for GSAP */
+        transform: translateY(20px);
+    }
+
+    .mobile-socials a:hover {
+        background: white;
+        color: black;
     }
 
     .menu-toggle {
@@ -1847,79 +1930,295 @@ ul {
         transform: rotate(-45deg) translate(5px, -6px);
     }
 
-    /* Layout Adjustments */
+    /* Hero Typography & Layout */
     .hero-title {
-        font-size: 3.2rem;
+        font-size: clamp(3rem, 12vw, 4rem);
+        margin-left: 0;
+        /* Align center */
+        margin-right: 0;
     }
 
-    .container {
-        padding: 0 6%;
+    .uiux-title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
     }
 
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
+    .uiux-hero-desc,
     .about-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        text-align: center;
+        /* Center align text for better mobile reading */
+        line-height: 1.6;
+        word-spacing: normal;
+        /* Reduce excessive spacing */
+    }
+
+    .video-container {
+        width: 300px;
+        height: 300px;
+        /* Smaller video on mobile */
+    }
+
+    /* Grid Stacking */
+    .about-grid,
+    .contact-grid,
+    /* Footer Optimized for Mobile - Parallel Layout */
+    .footer {
+        padding: 30px 20px;
+        text-align: center;
     }
 
     .footer-content {
         display: flex;
+        flex-direction: row;
+        /* Parallel / Horizontal */
+        flex-wrap: wrap;
+        /* Allow wrapping so copyright goes below */
+        justify-content: space-between;
+        align-items: center;
+        /* Align items vertically in the center */
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Logo at the Left */
+    .footer-left {
+        width: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        height: 35px;
+        /* Adjust size to fit row */
+        margin: 0;
+    }
+
+    /* Links in the Center */
+    .footer-center {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links {
+        display: flex;
         flex-direction: column;
+        /* Stack links vertically to save horizontal space but keep group parallel */
         align-items: center;
-        text-align: center;
+        gap: 5px;
+        /* Tight gap */
     }
 
+    .footer-links a {
+        padding: 2px 5px;
+        font-size: 0.85rem;
+        /* Smaller font for mobile row */
+        border: none !important;
+        white-space: nowrap;
+    }
+
+    .footer-links a::after {
+        content: none !important;
+        display: none;
+    }
+
+    /* Social at the Right */
     .footer-right {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
         align-items: center;
     }
 
-    .contact-right-column {
+    .social-links {
+        display: flex;
+        gap: 10px;
+        /* Tighter gap */
+        margin: 0;
+    }
+
+    .social-links a {
+        width: 35px;
+        /* Smaller touch targets for row layout */
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .copyright {
+        margin-top: 20px;
+        /* More space above copyright */
+        font-size: 0.75rem;
+        width: 100%;
+        /* Force full width to break to new line */
+        text-align: center;
+        order: 10;
+        /* Ensure it's last */
+    }
+
+    /* Services List */
+    .service-item {
+        flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
+        padding: 30px 0;
     }
 
-    .phone-wrapper {
-        width: 100%;
-        max-width: 380px;
+    .service-name {
+        font-size: 2.5rem;
     }
 
-    .phone-layer,
-    .phone-display {
-        width: 100%;
-    }
-
-    .phone-display .number {
-        font-size: 1.5rem;
+    .service-arrow {
+        align-self: flex-end;
+        /* Arrow to the right */
     }
 
     /* Works Section Adjustments */
-    .work-content-wrapper {
-        position: relative;
-    }
-
-    .nav-control {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
-
-    .nav-control.prev {
-        left: -10px;
-    }
-
-    .nav-control.next {
-        right: -10px;
+    .works-header {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
     }
 
     .works-title {
         font-size: 2.5rem;
+        margin-left: 0;
+    }
+
+    .project-display {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+        /* Remove side padding */
+    }
+
+    .visual-card-bg {
+        aspect-ratio: 1/1;
+        /* Square on mobile */
+        border-radius: 20px;
+    }
+
+    .visual-card-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Ensure full image visibility */
+    }
+
+    .project-info {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .project-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    /* Slider Navigation Controls */
+    .nav-control {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        /* Subtle background for visibility */
+        backdrop-filter: blur(5px);
+        border-radius: 50%;
+        z-index: 20;
+    }
+
+    .nav-control.prev {
+        left: 10px;
+    }
+
+    .nav-control.next {
+        right: 10px;
+    }
+
+    /* Contact Form & Inputs */
+    .contact-form-card {
+        padding: 25px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        font-size: 16px;
+        /* Prevent zoom on iOS */
+        padding: 12px 15px;
+    }
+
+    .phone-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .phone-display {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Disable hover effects on mobile to prevent sticky states */
+    .phone-wrapper:hover .phone-display,
+    .phone-wrapper:hover .layer-2,
+    .phone-wrapper:hover .layer-1 {
+        transform: none !important;
+    }
+
+    /* Active state for click interaction on mobile */
+    .phone-wrapper.active .phone-display {
+        transform: translate(-10px, -10px) !important;
+    }
+
+    .phone-wrapper.active .layer-2 {
+        transform: translate(5px, 5px) !important;
+    }
+
+    .phone-wrapper.active .layer-1 {
+        transform: translate(15px, 15px) !important;
+    }
+
+    .phone-display .number {
+        font-size: 1.2rem;
+    }
+
+    .submit-btn {
+        padding: 14px;
+    }
+
+    /* Touch Targets */
+    a,
+    button,
+    .nav-control {
+        min-height: 44px;
+        min-width: 44px;
+        /* Ensure accessible touch targets */
+    }
+
+    /* Hide decorative blobs/glows that might impact performance */
+    .hero-bg-glow {
+        opacity: 0.5;
+        filter: blur(40px);
+        /* Reduce blur radius for performance */
+    }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: clamp(2.5rem, 15vw, 3.5rem);
+    }
+
+    .service-name {
+        font-size: 2rem;
+    }
+
+    .section-heading {
+        font-size: 2.2rem;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
     }
 }
