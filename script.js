@@ -45,10 +45,11 @@ document.querySelectorAll('a[href^="#"], a[href*="#"]').forEach(anchor => {
 gsap.registerPlugin(ScrollTrigger);
 
 // 1. Loader / Hero Animation
+// 1. Loader / Hero Animation
 window.addEventListener('load', () => {
     const tl = gsap.timeline();
 
-    tl.to(".line span", {
+    tl.to(".line span, .uiux-title .line span", {
         y: 0,
         duration: 1.5,
         stagger: 0.2,
@@ -87,17 +88,32 @@ shapes.forEach(shape => {
         path.style.strokeDasharray = length;
         path.style.strokeDashoffset = length; // Start hidden
 
-        gsap.to(path, {
-            strokeDashoffset: 0,
-            duration: 2,
-            ease: "power1.inOut",
-            scrollTrigger: {
-                trigger: triggerElement,
-                start: startPos,
-                end: endPos,
-                scrub: 1
-            }
-        });
+        if (shape.classList.contains('auto-draw')) {
+            // Auto-play Animation (Service Pages)
+            gsap.to(path, {
+                strokeDashoffset: 0,
+                duration: 2.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: triggerElement,
+                    start: "top 75%",
+                    toggleActions: "play none none none"
+                }
+            });
+        } else {
+            // Scrub Animation (Index Page)
+            gsap.to(path, {
+                strokeDashoffset: 0,
+                duration: 2,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: triggerElement,
+                    start: startPos,
+                    end: endPos,
+                    scrub: 1
+                }
+            });
+        }
     });
 });
 
@@ -109,7 +125,8 @@ const revealTexts = document.querySelectorAll(".reveal-text");
 revealTexts.forEach(revealText => {
     // Split text into words
     const text = revealText.textContent;
-    const words = text.split(" ");
+    // Split by any whitespace to handle newlines/formatting and filter empty strings
+    const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     revealText.innerHTML = "";
 
     words.forEach(word => {
@@ -121,17 +138,33 @@ revealTexts.forEach(revealText => {
     });
 
     // Animate words on scroll
-    gsap.to(revealText.querySelectorAll("span"), {
-        color: "#ffffff",
-        stagger: 0.03, // Smoother wave-like flow
-        ease: "none", // Linear equal distribution
-        scrollTrigger: {
-            trigger: revealText, // Trigger based on the element itself
-            start: "top 80%",
-            end: "bottom 30%", // Adjusted for timing
-            scrub: true, // Smooth scrub
-        }
-    });
+    if (revealText.classList.contains('auto-reveal')) {
+        // Auto-Play Animation (Service Pages)
+        gsap.to(revealText.querySelectorAll("span"), {
+            color: "#ffffff",
+            duration: 1,
+            stagger: 0.02,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: revealText,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    } else {
+        // Scrub Animation (Index Page)
+        gsap.to(revealText.querySelectorAll("span"), {
+            color: "#ffffff",
+            stagger: 0.03, // Smoother wave-like flow
+            ease: "none", // Linear equal distribution
+            scrollTrigger: {
+                trigger: revealText, // Trigger based on the element itself
+                start: "top 80%",
+                end: "bottom 30%", // Adjusted for timing
+                scrub: true, // Smooth scrub
+            }
+        });
+    }
 });
 
 
@@ -452,11 +485,12 @@ if (contactForm && successMessage) {
 }
 
 // 13. UI/UX Page: "See More" Toggle
-const seeMoreBtn = document.getElementById('see-more-btn');
+// 13. UI/UX Page: "See More" Toggle
+const readMoreTrigger = document.getElementById('read-more-trigger');
 const extraReasons = document.querySelector('.extra-reasons');
 
-if (seeMoreBtn && extraReasons) {
-    seeMoreBtn.addEventListener('click', () => {
+if (readMoreTrigger && extraReasons) {
+    readMoreTrigger.addEventListener('click', () => {
         const isHidden = extraReasons.style.display === 'none';
 
         if (isHidden) {
@@ -473,8 +507,8 @@ if (seeMoreBtn && extraReasons) {
                 { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.1, ease: "power2.out" }
             );
 
-            // Change button text
-            seeMoreBtn.innerHTML = 'See Less <i class="fas fa-chevron-up"></i>';
+            // Change text
+            readMoreTrigger.textContent = 'Read Less';
         } else {
             // Hide
             gsap.to(extraReasons.children, {
@@ -495,7 +529,7 @@ if (seeMoreBtn && extraReasons) {
                     extraReasons.style.display = 'none';
                     extraReasons.style.height = ''; // Reset height for next open
                     extraReasons.style.opacity = '';
-                    seeMoreBtn.innerHTML = 'See More <i class="fas fa-chevron-down"></i>';
+                    readMoreTrigger.textContent = 'Read More';
                 }
             });
         }

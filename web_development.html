@@ -22,8 +22,7 @@
         rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -47,6 +46,8 @@
                 <div class="mobile-socials">
                     <a href="https://www.instagram.com/design_with_sago?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                         target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.threads.net/@design_with_sago" target="_blank" aria-label="Threads"><i
+                            class="fa-brands fa-threads"></i></a>
                     <a href="https://wa.me/9080605170?text=Hello" target="_blank" aria-label="WhatsApp"><i
                             class="fab fa-whatsapp"></i></a>
                     <a href="mailto:designwithsago@gmail.com" target="_blank" aria-label="Email"><i
@@ -65,14 +66,14 @@
     <header class="uiux-hero">
         <div class="container">
             <h1 class="uiux-title">
-                <span>WEB DEVELOPMENT</span>
-                <span>Services</span>
+                <div class="line"><span>WEB DEVELOPMENT</span></div>
+                <div class="line"><span>Services</span></div>
             </h1>
 
             <div class="about-grid">
                 <div class="about-visual">
                     <!-- Abstract Triangle Outline -->
-                    <svg viewBox="0 0 400 350" class="geometric-shape">
+                    <svg viewBox="0 0 400 350" class="geometric-shape auto-draw">
                         <path class="path path-1"
                             d="M120 40 L280 40 Q300 40 290 60 L210 220 Q200 240 190 220 L110 60 Q100 40 120 40 Z" />
                         <path class="path path-2"
@@ -83,10 +84,10 @@
                 </div>
 
                 <div class="about-content">
-                    <p class="uiux-hero-desc reveal-text" style="text-align: left; margin: 0;">
-                        At DWS, We Build High-Performance, Scalable Websites That Combine Clean Code With Seamless
-                        Functionality. From Responsive Front-End Interfaces To Robust Back-End Systems, We Transform
-                        Ideas Into Fast, Secure, And Future-Ready Web Experiences That Drive Real Business Growth.
+                    <p class="uiux-hero-desc reveal-text auto-reveal" style="text-align: left; margin: 0;"> At DWS, We
+                        Build High-Performance, Scalable Websites That Combine Clean Code With Seamless Functionality.
+                        From Responsive Front-End Interfaces To Robust Back-End Systems, We Transform Ideas Into Fast,
+                        Secure, And Future-Ready Web Experiences That Drive Real Business Growth.
                     </p>
                 </div>
             </div>
@@ -122,8 +123,8 @@
                     <div class="project-slide active">
                         <div class="project-display">
                             <div class="project-visual">
-                                <div class="visual-card-bg">
-                                    <img src="assets/WD 1 Image.png" alt="Crafy">
+                                <div class="visual-card-bg common-project-card">
+                                    <img src="assets/WD Image 1.png" alt="Crafy">
                                 </div>
                             </div>
                             <div class="project-info">
@@ -144,18 +145,18 @@
                     <div class="project-slide">
                         <div class="project-display">
                             <div class="project-visual">
-                                <div class="visual-card-bg">
-                                    <img src="assets/WD 2 Image.png" alt="E-Commerce">
+                                <div class="visual-card-bg common-project-card">
+                                    <img src="assets/WD Image 2.png" alt="Shine I-Tech ">
                                 </div>
                             </div>
                             <div class="project-info">
-                                <h3 class="project-title">E-Commerce Platform</h3>
+                                <h3 class="project-title">Shine I-Tech</h3>
                                 <p class="project-description">
-                                    A Fully Functional E-Commerce Platform Built With
-                                    Modern Technologies For Seamless Online Shopping.
-                                    Features Include Secure Payment Integration, Product
-                                    Management, And A Responsive Design That Ensures
-                                    A Smooth User Experience Across All Devices.
+                                    A modern and student-focused educational institute dedicated to building strong
+                                    academic and technical foundations. At Shine i-Tech, we provide industry-relevant
+                                    training, expert guidance, and practical learning experiences to help students grow
+                                    with confidence. Designed for clarity and excellence, our programs ensure structured
+                                    learning, skill development, and a successful career path.
                                 </p>
                             </div>
                         </div>
@@ -165,18 +166,18 @@
                     <div class="project-slide">
                         <div class="project-display">
                             <div class="project-visual">
-                                <div class="visual-card-bg">
-                                    <img src="assets/WD 3 Image.png" alt="Web App">
+                                <div class="visual-card-bg common-project-card">
+                                    <img src="assets/WD Image 3.png" alt="Healthcare Management">
                                 </div>
                             </div>
                             <div class="project-info">
-                                <h3 class="project-title">Custom Web Application</h3>
+                                <h3 class="project-title">Healthcare Management</h3>
                                 <p class="project-description">
-                                    A Custom-Built Web Application Designed To Streamline
-                                    Business Operations. With A Focus On Performance,
-                                    Security, And Scalability, The Solution Delivers
-                                    Real-Time Data Processing, User Management, And
-                                    Seamless Integration With Third-Party Services.
+                                    A reliable and efficient healthcare management platform designed to streamline
+                                    medical operations and improve patient care. Our system enables easy appointment
+                                    scheduling, secure record management, and real-time coordination between patients
+                                    and healthcare providers. Built for accuracy and efficiency, the platform ensures
+                                    smooth workflows, better communication, and enhanced healthcare experiences.
                                 </p>
                             </div>
                         </div>
@@ -205,7 +206,8 @@
                 <div class="reason-item">
                     <p>At DWS, We Go Beyond Just Building Websites — We Create Powerful Digital Platforms That Drive
                         Real Business Growth. Our Team Combines Strategic Planning, Modern Technologies, And Clean
-                        Development Practices To Deliver Fast, Secure, And Scalable Web Solutions.</p>
+                        Development Practices To Deliver Fast, Secure, And Scalable Web Solutions. <span
+                            id="read-more-trigger" class="read-more-link">Read More</span></p>
                 </div>
                 <!-- Hidden Reasons -->
                 <div class="extra-reasons" style="display: none; width: 100%;">
@@ -224,11 +226,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- See More Button -->
-            <button id="see-more-btn" class="see-more-btn">
-                See More <i class="fas fa-chevron-down"></i>
-            </button>
 
             <br>
 
@@ -282,7 +279,9 @@
                 <div class="social-links">
                     <a href="https://www.instagram.com/design_with_sago?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                         target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/9445607977?text=Hello" target="_blank" aria-label="WhatsApp"><i
+                    <a href="https://www.threads.net/@design_with_sago" target="_blank" aria-label="Threads"><i
+                            class="fa-brands fa-threads"></i></a>
+                    <a href="https://wa.me/9080606170?text=Hello" target="_blank" aria-label="WhatsApp"><i
                             class="fab fa-whatsapp"></i></a>
                     <a href="mailto:designwithsago@gmail.com" target="_blank" aria-label="Email"><i
                             class="fas fa-envelope"></i></a>
