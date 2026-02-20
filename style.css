@@ -2275,3 +2275,28 @@ ul {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     transform: translateX(3px);
 }
+
+/* =========================================
+   SMOKE CURSOR EFFECT (Desktop Only)
+   ========================================= */
+#fluid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    /* On top of everything */
+    pointer-events: none;
+    /* Let clicks pass through */
+    display: none;
+    /* Hidden by default */
+    mix-blend-mode: screen;
+    /* Additive blending for glow effect */
+}
+
+@media (min-width: 769px) {
+    #fluid {
+        display: block;
+    }
+}
