@@ -1997,23 +1997,27 @@ ul {
 
     /* Grid Stacking */
     .about-grid,
-    .contact-grid,
-    /* Footer Optimized for Mobile - Parallel Layout */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    /* Footer Optimized for Mobile */
     .footer {
-        padding: 30px 20px;
-        text-align: center;
+        padding: 40px 20px;
+        text-align: left;
     }
 
     .footer-content {
         display: flex;
         flex-direction: row;
-        /* Parallel / Horizontal */
-        flex-wrap: wrap;
-        /* Allow wrapping so copyright goes below */
+        /* Horizontal row */
         justify-content: space-between;
-        align-items: center;
-        /* Align items vertically in the center */
-        gap: 10px;
+        /* Spread apart */
+        align-items: flex-start;
+        /* Top align */
+        flex-wrap: wrap;
+        gap: 20px;
         width: 100%;
         margin-bottom: 20px;
     }
@@ -2021,38 +2025,35 @@ ul {
     /* Logo at the Left */
     .footer-left {
         width: auto;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        flex: 0 1 auto;
     }
 
     .footer-logo img {
         height: 35px;
-        /* Adjust size to fit row */
         margin: 0;
     }
 
-    /* Links in the Center */
+    /* Links in the Center (Now arranged vertically, same column start) */
     .footer-center {
         width: auto;
+        flex: 0 1 auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
     }
 
     .footer-links {
         display: flex;
         flex-direction: column;
-        /* Stack links vertically to save horizontal space but keep group parallel */
-        align-items: center;
-        gap: 5px;
-        /* Tight gap */
+        /* Stack vertically */
+        align-items: flex-start;
+        /* Align text to left */
+        gap: 15px;
+        /* Space between links */
     }
 
     .footer-links a {
-        padding: 2px 5px;
-        font-size: 0.85rem;
-        /* Smaller font for mobile row */
+        padding: 0;
+        font-size: 0.9rem;
         border: none !important;
         white-space: nowrap;
     }
@@ -2065,34 +2066,31 @@ ul {
     /* Social at the Right */
     .footer-right {
         width: auto;
+        flex: 0 1 auto;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .social-links {
         display: flex;
         gap: 10px;
-        /* Tighter gap */
         margin: 0;
     }
 
     .social-links a {
         width: 35px;
-        /* Smaller touch targets for row layout */
         height: 35px;
         font-size: 1rem;
     }
 
     .copyright {
-        margin-top: 20px;
-        /* More space above copyright */
+        margin-top: 30px;
         font-size: 0.75rem;
         width: 100%;
-        /* Force full width to break to new line */
         text-align: center;
         order: 10;
-        /* Ensure it's last */
+        color: #666;
     }
 
     /* Services List */
